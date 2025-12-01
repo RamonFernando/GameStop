@@ -1,15 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { use, useState } from "react";
 import Link from "next/link";
 import { useCart } from "@/contexts/CartContext";
 import { CartDrawer } from "@/components/CartDrawer";
+import { useSearch } from "@/contexts/SearchContext";
 
 const PLATFORMS = ["PlayStation", "Xbox", "Nintendo", "PC"];
 
 export function Header() {
   const { totalItems } = useCart();
   const [open, setOpen] = useState(false);
+  const { query, setQuery } = useSearch();
+  const [localSearch, setLocalSearch] = useState(""); // For future use
 
   return (
     <header className="header-shell">
@@ -49,6 +52,14 @@ export function Header() {
               type="text"
               placeholder="Buscar..."
               className="nav-search-input"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.currentTarget.blur();
+                  setQuery("");
+                }
+              }}
             />
           </div>
 

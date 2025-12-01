@@ -122,7 +122,7 @@ export function Hero() {
         {/* Mini carrusel de últimos lanzamientos */}
         <div className="hero-thumbs-wrapper">
           <div className="hero-thumbs-header">
-            <h2 className="section-title">Últimos lanzamientos</h2>
+            <h2 className="section-title">Destacados</h2>
             {/* <p className="section-subtitle">Explora juegos recientes de tu catálogo.</p> */}
           </div>
 
