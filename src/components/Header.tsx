@@ -41,16 +41,16 @@ export function Header() {
 
         {/* ACCIONES DERECHA */}
         <div className="nav-actions">
-
+          
+          {/* BUSCADOR */}
           <div className="search-container">
-  <span className="search-icon">🔍</span>
-  <input
-    type="text"
-    placeholder="Buscar..."
-    className="nav-search-input"
-  />
-</div>
-
+            <span className="search-icon">🔍</span>
+            <input
+              type="text"
+              placeholder="Buscar..."
+              className="nav-search-input"
+            />
+          </div>
 
           {/* CARRITO */}
           <button

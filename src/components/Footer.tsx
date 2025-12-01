@@ -7,7 +7,7 @@ export function Footer() {
     <div className="footer-info">
       <h3 className="footer-title">Next Gaming Store</h3>
       <p className="footer-text">
-        Tu tienda digital de videojuegos y contenido gaming.  
+        Tu tienda digital de videojuegos y contenido gaming.
         UI creada para ofrecer la mejor experiencia en plataformas PlayStation, Xbox, Nintendo y PC.
       </p>
       <span className="footer-copy">© {new Date().getFullYear()} Next Gaming Store. Todos los derechos reservados.</span>

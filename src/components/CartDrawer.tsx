@@ -53,7 +53,7 @@ export function CartDrawer({ onClose }: Props) {
             {!hasItems && (
               <p style={{ fontSize: "0.85rem", color: "var(--text-soft)" }}>
                 Todavía no has añadido ningún juego. Busca tu título favorito y
-                pulsa <strong>“Añadir”</strong> para verlo aquí.
+                pulsa <strong>“Añadir”</strong> para agregarlo al carrito.
               </p>
             )}
 
