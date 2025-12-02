@@ -22,7 +22,7 @@ export function GameGrid({ games }: Props) {
       <div className="grid-games">
         {games.length === 0 ? (
           <p className="section-subtitle">
-            No hemos encontrado juegos para “{games[0].title}”. Prueba con otro título.
+            No hemos encontrado juegos con el título buscado. Prueba con otro título.
           </p>
         ) : (
           <div className="grid-games">
