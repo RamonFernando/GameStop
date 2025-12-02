@@ -1,0 +1,305 @@
+    /* =========================================
+    AUTH / LOGIN - GameStop Access
+    Sección específica para la página /login
+    ========================================= */
+
+    .auth-shell {
+    margin-top: 1.75rem;
+    }
+
+    /* Card de login: reutiliza .card, pero ajustamos padding interno */
+    .auth-card {
+    padding: 0;
+    }
+
+    /* Grid principal: formulario + imagen lateral */
+    .auth-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    min-height: 420px;
+    }
+
+    /* Panel izquierdo: formulario */
+    .auth-form-panel {
+    padding: 2.25rem 2.25rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    }
+
+    /* Encabezado del formulario */
+    .auth-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    }
+
+    .auth-kicker {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #A78BFA;
+    }
+
+    .auth-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    }
+
+    .auth-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-soft);
+    max-width: 26rem;
+    }
+
+    /* Bloque general del formulario */
+    .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    }
+
+    /* Grupo de campo (label + input + helper) */
+    .auth-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    }
+
+    .auth-label {
+    font-size: 0.8rem;
+    color: var(--text-soft);
+    }
+
+    /* Inputs adaptados al estilo de tu navbar/búsqueda */
+    .auth-input {
+    width: 100%;
+    padding: 0.65rem 0.8rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-subtle);
+    background: rgba(15, 23, 42, 0.9);
+    color: var(--text-main);
+    font-size: 0.9rem;
+    }
+
+    .auth-input::placeholder {
+    color: var(--text-soft);
+    }
+
+    .auth-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.6);
+    }
+
+    /* Texto auxiliar bajo el campo (ej. "¿Olvidaste la contraseña?") */
+    .auth-field-helper {
+    display: flex;
+    justify-content: flex-end;
+    }
+
+    /* Enlaces dentro del login */
+    .auth-link {
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-decoration: none;
+    }
+
+    .auth-link:hover {
+    text-decoration: underline;
+    }
+
+    /* Botón principal de acceso (usa button-primary) */
+    .auth-submit {
+    width: 100%;
+    margin-top: 0.4rem;
+    padding-block: 0.7rem;
+    font-size: 0.9rem;
+    }
+
+    /* Texto alternativo de registro */
+    .auth-alt {
+    margin-top: 0.2rem;
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    }
+
+    /* Separador "o continúa con" */
+    .auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0.6rem 0;
+    }
+
+    .auth-divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(148, 163, 184, 0.4),
+        transparent
+    );
+    }
+
+    .auth-divider-text {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--text-soft);
+    }
+
+    /* Fila de botones sociales */
+    .auth-social-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    }
+
+    /* Botones de acceso social (Google, Facebook, Twitter) */
+    .auth-social-button {
+    flex: 1;
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.55rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-subtle);
+    background: radial-gradient(
+        circle at top,
+        rgba(15, 23, 42, 0.98),
+        rgba(15, 23, 42, 0.94)
+    );
+    color: var(--text-main);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 140ms ease-out, border-color 140ms ease-out,
+        transform 120ms ease-out, box-shadow 120ms ease-out;
+    }
+
+    .auth-social-button:hover {
+    background: radial-gradient(
+        circle at top left,
+        rgba(124, 58, 237, 0.25),
+        rgba(15, 23, 42, 0.97)
+    );
+    border-color: var(--accent-strong);
+    box-shadow: 0 14px 28px rgba(30, 64, 175, 0.6);
+    transform: translateY(-1px);
+    }
+
+    /* Iconos de los botones sociales */
+    .auth-social-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    }
+
+    .auth-social-icon-img {
+    width: 18px;
+    height: 18px;
+    }
+
+    /* Panel derecho con imagen y branding */
+    .auth-media-panel {
+    position: relative;
+    overflow: hidden;
+    }
+
+    /* Contenedor relativo para el <Image fill /> */
+    .auth-media-inner {
+    position: relative;
+    height: 100%;
+    min-height: 420px;
+    }
+
+    /* Imagen de fondo del login */
+    .auth-media-image {
+    object-fit: cover;
+    }
+
+    /* Degradado sobre la imagen para integrar tu paleta */
+    .auth-media-gradient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top left,
+        rgba(124, 58, 237, 0.4),
+        transparent 55%
+        ),
+        linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.05),
+        rgba(15, 23, 42, 0.85)
+        );
+    }
+
+    /* Caja de texto sobre la imagen */
+    .auth-media-brand {
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.75rem 0.85rem;
+    border-radius: 0.9rem;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    background: radial-gradient(
+        circle at top left,
+        rgba(15, 23, 42, 0.96),
+        rgba(15, 23, 42, 0.92)
+    );
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+    }
+
+    .auth-media-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(129, 140, 248, 0.95);
+    }
+
+    .auth-media-text {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    }
+
+    /* ------------------------------
+    RESPONSIVE
+    ------------------------------ */
+
+    @media (max-width: 960px) {
+    .auth-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .auth-media-panel {
+        display: none; /* En móvil ocultamos la imagen lateral */
+    }
+
+    .auth-form-panel {
+        padding: 1.75rem 1.5rem 2rem;
+    }
+    }
+
+    @media (max-width: 640px) {
+    .auth-shell {
+        margin-top: 1.25rem;
+    }
+
+    .auth-form-panel {
+        padding: 1.5rem 1.25rem 1.85rem;
+    }
+}
